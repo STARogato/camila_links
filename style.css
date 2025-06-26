@@ -3,7 +3,19 @@ body {
   color: #fff;
   font-family: Arial, sans-serif;
 }
+.descricao {
+  text-align: center;
+}
 
 h1 {
   color: #ff4081;
+}
+
+.perfil {
+  width: 40vw;               
+  max-width: 200px;         
+  height: auto;             
+  border-radius: 50%;       
+  display: block;
+  margin: 0 auto;            
 }
