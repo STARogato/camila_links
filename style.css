@@ -12,10 +12,18 @@ h1 {
 }
 
 .perfil {
-  width: 40vw;               
-  max-width: 200px;         
-  height: auto;             
-  border-radius: 50%;       
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   display: block;
-  margin: 0 auto;            
+  margin: 0 auto;
+  object-fit: cover; 
+}
+
+@media (max-width: 600px) {
+  .perfil {
+    width: 50vw;
+    height: 50vw;
+    max-width: 150px;
+  }
 }
