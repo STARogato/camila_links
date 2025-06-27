@@ -17,10 +17,10 @@ for (let i = 0; i < numStars; i++) {
     element: star,
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight,
-    vx: (Math.random() - 0.5) * 2, 
-    vy: (Math.random() - 0.5) * 2,  
+    vx: (Math.random() - 0.7), 
+    vy: (Math.random() - 0.7),  
     rotation: Math.random() * 360,
-    rotationSpeed: (Math.random() - 0.5) * 20
+    rotationSpeed: (Math.random() - 0.5) * 2
   });  
 }
 
@@ -30,7 +30,7 @@ function animateStars() {
     star.y += star.vy;
     star.rotation += star.rotationSpeed;
 
-    // Colisão com as bordas
+  
     if (star.x <= 0 || star.x >= window.innerWidth - 50) star.vx *= -1;
     if (star.y <= 0 || star.y >= window.innerHeight - 50) star.vy *= -1;
 

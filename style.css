@@ -2,33 +2,33 @@ body {
   background-color: #121212;
   color: #fff;
   font-family: Arial, sans-serif;
-  margin: 0; /* para tirar margens padrão que podem causar scroll */
-  overflow-x: hidden; /* evita scroll horizontal */
+  margin: 0; 
+  overflow-x: hidden; 
 }
 
 .background {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;  /* usar vw para garantir a largura da viewport */
-  height: 100vh; /* idem para altura */
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  z-index: -1; 
-  pointer-events: none; /* evita interferência nos cliques */
+  z-index: -1;
+  pointer-events: none;
 }
 
 img.star {
   position: absolute;
-  width: 40px; /* tamanho menor e fixo para evitar estrelas enormes no desktop */
+  width: 40px;
   height: 40px;
   pointer-events: none;
   user-select: none;
-  will-change: transform, left, top; /* ajuda performance na animação */
+  will-change: transform, left, top;
 }
 
 .descricao {
   text-align: center;
-  position: relative; /* para garantir que fique sobre o fundo */
+  position: relative;
   z-index: 0;
 }
 
@@ -37,19 +37,58 @@ h1 {
   margin-top: 0;
 }
 
+.biografia {
+  margin-top: 5vw;
+  margin-bottom: 40px; 
+  padding: 0 5vw;
+  text-align: center;
+}
+
 .perfil {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
-  object-fit: cover; 
+  object-fit: cover;
 }
+
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.link img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.link img:hover {
+  transform: scale(1.2);
+}
+
 
 @media (max-width: 600px) {
   .perfil {
     width: 50vw;
     height: 50vw;
     max-width: 150px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .link img {
+    width: 25px;
+    height: 25px;
   }
 }
